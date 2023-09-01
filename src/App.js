@@ -60,7 +60,7 @@ export default function App() {
         <Forecast />
         <small>
           <a
-            href="https://github.com/KeaMohlala/finalweatherapp-shecodes"
+            href="https://github.com/KeaMohlala/react-weatherapp.git"
             target="_blank"
           >
             Open-source code

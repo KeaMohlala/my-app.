@@ -1,13 +1,59 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+.border {
+  font-weight: bold;
+  font-size: 25px;
+  text-align: center;
+  background: linear-gradient(to top, #accbee 0%, #e7f0fd 100%);
+  border-radius: 30px;
+  font-family: "Sancreek", cursive;
+}
+.city {
+  color: #ff6473;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.forecast {
+  font-family: "Sancreek";
+  font-weight: bold;
+  font-size: 20px;
+  background: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0.15) 0%,
+      rgba(0, 0, 0, 0.15) 100%
+    ),
+    radial-gradient(
+        at top center,
+        rgba(255, 255, 255, 0.4) 0%,
+        rgba(0, 0, 0, 0.4) 120%
+      )
+      #989898;
+  text-align: center;
+  border-radius: 30px;
+}
+.search-form {
+  margin-bottom: 20px;
+}
+.container {
+  margin: 30px, auto;
+  padding: 30px;
+  max-width: 900px;
+}
+.humidity {
+  margin-left: -30px;
+  margin-right: 10px;
+}
+.description {
+  text-transform: capitalize;
+}
+
+.units a {
+  text-decoration: none;
+  color: #ff6473;
+  cursor: default;
+}
+.units a:hover {
+  text-decoration: underline;
+  cursor: default;
 }

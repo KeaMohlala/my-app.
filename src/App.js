@@ -1,11 +1,11 @@
-import logo from "./logo.svg";
+//import logo from "./logo.svg";
 import "./App.css";
 
-import "./styles.css";
-import Searchcity from "./Searchcity";
-import Searchbutton from "./Searchbutton";
-import Currentlocation from "./Currentlocation";
-import Forecast from "./Forecast";
+import "./index.css";
+import Searchcity from "./searchcity";
+import Searchbutton from "./searchbutton";
+import Currentlocation from "./currentlocation";
+import Forecast from "./forecast";
 
 export default function App() {
   return (

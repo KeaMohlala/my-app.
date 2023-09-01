@@ -1,6 +1,4 @@
-//import logo from "./logo.svg";
 import "./App.css";
-
 import "./index.css";
 import Searchcity from "./searchcity";
 import Searchbutton from "./searchbutton";

@@ -24,11 +24,11 @@ export default function App() {
               19
             </span>
             <span className="units">
-              <a href="#" id="celcius-link" className="active">
+              <a href="/" id="celcius-link" className="active">
                 °C{" "}
               </a>
               |{" "}
-              <a href="#" id="farenheit-link">
+              <a href="/" id="farenheit-link">
                 °F{" "}
               </a>
             </span>
@@ -60,6 +60,7 @@ export default function App() {
           <a
             href="https://github.com/KeaMohlala/react-weatherapp.git"
             target="_blank"
+            rel="noreferrer"
           >
             Open-source code
           </a>

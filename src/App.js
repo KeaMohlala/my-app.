@@ -19,7 +19,7 @@ export default function App() {
         <br />
         <div className="border">
           <div className="city">
-            <span id="cities">Johannesburg {""}</span>
+            <span id="cities">Johannesburg {""} </span>
             <span className="temperature" id="temp">
               19
             </span>

@@ -1,9 +1,7 @@
 import "./App.css";
 import "./index.css";
-import Searchcity from "./searchcity";
-import Searchbutton from "./searchbutton";
-import Currentlocation from "./currentlocation";
 import Forecast from "./forecast";
+import Weather from "./weather";
 
 export default function App() {
   return (
@@ -11,9 +9,7 @@ export default function App() {
       <div className="container">
         <form className="search-form" id="search-form">
           <div className="row">
-            <Searchcity />
-            <Searchbutton />
-            <Currentlocation />
+            <Weather />
           </div>
         </form>
         <br />

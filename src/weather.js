@@ -2,14 +2,21 @@ import React, { useState } from "react";
 import axios from "axios";
 import "./index.css";
 
-export default function Weather() {
-  const [ready, setReady] = useState(false);
-  const [temperature, setTemperature] = useState(null);
+export default function Weather(props) {
+  const [weatherInfo, setWeatherInfo] = useState({ ready: false });
   function cityWeather(response) {
-    setTemperature(response.data.main.temp);
-    setReady(true);
+    setWeatherInfo({
+      ready: true,
+      temperature: response.data.main.temp,
+      wind: response.data.wind.speed,
+      city: response.data.name,
+      humidity: response.data.main.humidity,
+      description: response.data.weather[0].description,
+      iconUrl: "https://ssl.gstatic.com/onebox/weather/64/sunny_s_cloudy.png",
+      date: " Thursday, 11:37",
+    });
   }
-  if (ready) {
+  if (weatherInfo.ready) {
     return (
       <div>
         <div className="container">
@@ -42,9 +49,11 @@ export default function Weather() {
           <br />
           <div className="border">
             <div className="city">
-              <span id="cities">Johannesburg {""} </span>
+              <span id="cities">
+                {weatherInfo.city} {""}{" "}
+              </span>
               <span className="temperature" id="temp">
-                (Math.round(temperature))
+                {Math.round(weatherInfo.temperature)}
               </span>
               <span className="units">
                 <a href="/" id="celcius-link" className="active">
@@ -57,24 +66,24 @@ export default function Weather() {
               </span>
             </div>
             <div className="search" id="date">
-              Thursday, 11:37
+              {weatherInfo.date}
             </div>
             <div className="icon">
               <img
-                src="https://ssl.gstatic.com/onebox/weather/64/sunny_s_cloudy.png"
-                alt="clear"
+                src={weatherInfo.iconUrl}
+                alt={weatherInfo.description}
                 id="icon"
               />
             </div>
-            <div className="description" id="description">
-              Clear
+            <div className="description text-capitalize" id="description">
+              {weatherInfo.description}
             </div>
             <div className="moreinfo">
               <span className="humidity" id="humidity">
-                Humidity: 0%
+                Humidity: {weatherInfo.humidity}%
               </span>
               <span className="wind" id="wind">
-                Wind: 5km/h
+                Wind: {Math.round(weatherInfo.wind)}km/h
               </span>
             </div>
           </div>
@@ -82,9 +91,8 @@ export default function Weather() {
       </div>
     );
   } else {
-    const apiKey = "b1a8336ff1e05b64da5625e4158fbea3";
-    let city = "Johannesburg";
-    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+    const apiKey = "9cb72bec958f8fb02391985ed7b219d2";
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${props.defaultCity}&appid=${apiKey}&units=metric`;
     axios.get(apiUrl).then(cityWeather);
     return "loading...";
   }

@@ -27,7 +27,7 @@ export default function WeatherSearch(props) {
         <FormattedDate date={props.data.date} alt={props.data.description} />
       </div>
       <div>
-        <WeatherIcon code={props.data.icon} size={52} />
+        <WeatherIcon code={props.data.icon} size={50} />
       </div>
       <div className="description text-capitalize" id="description">
         {props.data.description}

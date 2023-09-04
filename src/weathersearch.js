@@ -1,5 +1,7 @@
 import React from "react";
 import FormattedDate from "./formatteddate";
+import WeatherIcon from "./weathericon.js";
+import "./index.css";
 
 export default function WeatherSearch(props) {
   return (
@@ -22,10 +24,10 @@ export default function WeatherSearch(props) {
         </span>
       </div>
       <div className="search" id="date">
-        <FormattedDate date={props.data.date} />
+        <FormattedDate date={props.data.date} alt={props.data.description} />
       </div>
-      <div className="icon">
-        <img src={props.data.iconUrl} alt={props.data.description} id="icon" />
+      <div>
+        <WeatherIcon code={props.data.icon} size={52} />
       </div>
       <div className="description text-capitalize" id="description">
         {props.data.description}

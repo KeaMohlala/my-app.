@@ -1,6 +1,7 @@
 import React from "react";
 import FormattedDate from "./formatteddate";
 import WeatherIcon from "./weathericon.js";
+import WeatherTemperature from "./weathertemperature.js";
 import "./index.css";
 
 export default function WeatherSearch(props) {
@@ -10,18 +11,7 @@ export default function WeatherSearch(props) {
         <span id="cities">
           {props.data.city} {""}{" "}
         </span>
-        <span className="temperature" id="temp">
-          {Math.round(props.data.temperature)}
-        </span>
-        <span className="units">
-          <a href="/" id="celcius-link" className="active">
-            °C{" "}
-          </a>
-          |{" "}
-          <a href="/" id="farenheit-link">
-            °F{" "}
-          </a>
-        </span>
+        <WeatherTemperature celcius={props.data.temperature} />
       </div>
       <div className="search" id="date">
         <FormattedDate date={props.data.date} alt={props.data.description} />

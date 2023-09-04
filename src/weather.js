@@ -58,11 +58,6 @@ export default function Weather(props) {
                   className="form-control btn btn-primary shadow-sm w-100"
                 />
               </div>
-              <div className="col-3">
-                <button className="btn btn-info w-100" id="current-location">
-                  Current Location
-                </button>
-              </div>
             </div>
           </form>
           <br />

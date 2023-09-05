@@ -10,6 +10,7 @@ export default function Weather(props) {
   function cityWeather(response) {
     setWeatherInfo({
       ready: true,
+      coordinates: response.data.coord,
       temperature: response.data.main.temp,
       wind: response.data.wind.speed,
       city: response.data.name,
@@ -63,7 +64,7 @@ export default function Weather(props) {
           </form>
           <br />
           <WeatherSearch data={weatherInfo} />
-          <Forecast />
+          <Forecast coordinates={weatherInfo.coordinates} />
         </div>
       </div>
     );

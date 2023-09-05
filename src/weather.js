@@ -57,7 +57,7 @@ export default function Weather(props) {
                 <input
                   type="submit"
                   value="Search"
-                  className="form-control btn btn-primary shadow-sm w-100"
+                  className="form-control btn btn-info shadow-sm w-100"
                 />
               </div>
             </div>

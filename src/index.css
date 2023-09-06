@@ -10,16 +10,17 @@
   text-align: center;
   background: linear-gradient(to top, #fddb92 0%, #d1fdff 100%);
   border-radius: 20px;
-  font-family: "Sancreek", cursive;
+  font-family: "Oswald", sans-serif;
 }
 .city {
-  color: #3a4750;
+  color: #272932;
   font-size: 35px;
+  margin-bottom: 20px;
 }
 
 .forecast {
   padding: 20px;
-  font-family: "Sancreek";
+  font-family: "Poppins", sans-serif;
   font-weight: bold;
   font-size: 20px;
   background: #90f6d7;
@@ -44,7 +45,7 @@
 
 .units a {
   text-decoration: none;
-  color: #3a4750;
+  color: #272932;
   cursor: default;
 }
 .units a:hover {

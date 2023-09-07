@@ -7,7 +7,7 @@ export default function App() {
   return (
     <div className="App">
       <Weather defaultCity="Johannesburg" />
-      <small>
+      <small className="github-link mt-0">
         <a
           href="https://github.com/KeaMohlala/react-weatherapp.git"
           target="_blank"

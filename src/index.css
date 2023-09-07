@@ -14,7 +14,7 @@
 }
 .city {
   color: #272932;
-  font-size: 35px;
+  font-size: 45px;
   margin-bottom: 20px;
 }
 
@@ -54,4 +54,7 @@
 }
 .weather-forecast-min {
   opacity: 0.7;
+}
+.github-link {
+  font-family: monospace;
 }

@@ -1,3 +1,16 @@
+The weather app was created as part of the SheCodes workshop. It features a simple search engine to display a 5-day weather forecast for most cities in the world. React Javascript and Bootstrap were used to create the app. The website is hosted on Netlify. 
+
+
+Deployed site: https://superlative-profiterole-fe3152.netlify.app/
+
+Author: Keamogetse Mohlala (https://www.linkedin.com/in/keamogetse-mohlala/)
+
+
+
+
+------------------------------------------------------------------------------------------------
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
